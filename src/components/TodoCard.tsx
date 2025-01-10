@@ -60,11 +60,12 @@ export default function TodoCard({
       <input
         type="text"
         className={`w-full px-2 bg-transparent outline-none ${
-          completed ? "line-through" : ""
+          completed ? "line-through text-gray-200" : ""
         }`}
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         onBlur={updateTitle}
+        disabled={completed}
       />
       <input type="checkbox" checked={completed} onChange={updateCompleted} />
     </div>
