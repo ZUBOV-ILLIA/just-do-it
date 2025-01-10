@@ -6,8 +6,6 @@ export async function getTodos() {
   try {
     const res = await axios.get(`${API}/todos`);
 
-    console.log(res);
-
     return res.data;
   } catch (error) {
     console.error(error);
